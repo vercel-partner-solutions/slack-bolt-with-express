@@ -6,7 +6,7 @@ const { app: boltApp, receiver } = require('../bolt/app');
 
 const app = express();
 
-const handler = createHandler(app, receiver);
+const handler = createHandler(boltApp, receiver);
 app.post('/api/slack/events', handler);
 
 // Local dev listener (ignored on Vercel)
