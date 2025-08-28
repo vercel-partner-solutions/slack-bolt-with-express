@@ -10,6 +10,7 @@ const slackHandler = createHandler(boltApp, receiver);
 
 app.post("/api/slack/events", async (req, res) => {
     try {
+        // @vercel/slack-bolt expects Web API Request, so we convert back/forth.
         const fetchReq = await toFetchRequest(req);
         const fetchRes = await slackHandler(fetchReq);
         await sendFetchResponse(res, fetchRes);
