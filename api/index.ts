@@ -8,8 +8,8 @@ const { toFetchRequest } = require('../lib/utils');
 const app = express();
 
 const handler = createHandler(boltApp, receiver);
-app.post('/api/slack/events', (req) => {
-    const fetchRequest = toFetchRequest(req);
+app.post('/api/slack/events', async (req) => {
+    const fetchRequest = await toFetchRequest(req);
     return handler(fetchRequest);
 });
 
