@@ -72,7 +72,7 @@ This is the Bolt app entry. It initializes `@vercel/slack-bolt`'s `VercelReceive
 
 ### [`bolt/listeners`](./bolt/listeners)
 
-Every incoming request is routed to a "listener". Inside this directory, we group each listener by Slack Platform feature, e.g. [`messages`](./src/bolt/listeners/messages) for message events
+Every incoming request is routed to a "listener". Inside this directory, we group each listener by Slack Platform feature, e.g. [`messages`](./bolt/listeners/messages) for message events
 
 ### Server: [`api/index.ts`](./api/index.ts)
 
