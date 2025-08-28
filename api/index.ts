@@ -4,7 +4,6 @@ const path = require('path');
 const { createHandler } = require('@vercel/slack-bolt');
 const { app: boltApp, receiver } = require('../bolt/app');
 
-
 const app = express();
 
 const handler = createHandler(app, receiver);
