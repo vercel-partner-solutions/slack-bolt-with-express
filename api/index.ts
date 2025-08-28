@@ -5,6 +5,7 @@ const { createHandler } = require('@vercel/slack-bolt');
 const { app: boltApp, receiver } = require('../bolt/app');
 
 const app = express();
+app.use(express.text());
 
 const handler = createHandler(boltApp, receiver);
 app.post('/api/slack/events', handler);
